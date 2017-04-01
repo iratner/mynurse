@@ -1,4 +1,7 @@
 $main-background-color: yellow;
+$guardian-color: #7fe693;
+$patient-color: #9ebfad;
+$nurse-color: #46484f;
 
 body {
    color: #c0c8dd;
@@ -15,5 +18,7 @@ body {
       background-color: $main-background-color;
       height: 100%;
       width: 100%;
+
+      @import "sass/user-select";
    }
 }

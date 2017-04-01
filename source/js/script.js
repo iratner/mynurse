@@ -15,7 +15,7 @@ var Nurses = (function() {
         init : init
     }
 
-})(jQuery);
+})();
 
 // Handlebars examples
 

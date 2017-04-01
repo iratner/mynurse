@@ -1,0 +1,57 @@
+.header {
+
+   background-color: $guardian-color;
+   color: white;
+
+   #brand {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-bottom: 40px;
+      padding: 20px;
+
+      .title {
+         font-size: 1.5em;
+      }
+   }
+
+   .navbar {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      background-color: white;
+
+
+
+      ul {
+         display: flex;
+         padding: 0;
+         margin: 0;
+
+         li {
+            list-style: none;
+            font-size: 1.2em;
+            padding: 3px 10px;
+
+            padding: 5px 20px;
+            color: $guardian-color;
+         }
+
+         &.navbar-right {
+            justify-content: flex-end;
+
+            li {
+
+            }
+         }
+
+         &.navbar-left {
+            justify-content: flex-start;
+
+            li {
+
+            }
+         }
+      }
+   }
+}

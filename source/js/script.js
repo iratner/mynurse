@@ -1,7 +1,5 @@
 var Nurses = (function() {
 
-    var $mainContainer = $('#ns-container');
-
     var init = function() {
 
         // Append the main container (#ns-container)

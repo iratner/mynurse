@@ -7,3 +7,6 @@ Handlebars.registerPartial("header", Handlebars.template({"compiler":[7,">= 4.0.
 Handlebars.registerPartial("nurse-signup", Handlebars.template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
     return "<div class=\"nurse-signup\">\n    \n</div>";
 },"useData":true}));
+Handlebars.registerPartial("select-user-type", Handlebars.template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
+    return "<div id=\"select-user-type\">\n    <div id=\"cta\">\n\n    </div>\n\n    <div id=\"user-sections\">\n        <section data-user-type=\"patient\" class=\"user-section\"></section>\n        <section data-user-type=\"guardian\" class=\"user-section\"></section>\n        <section data-user-type=\"nurse\" class=\"user-section\"></section>\n    </div>\n\n</div>";
+},"useData":true}));

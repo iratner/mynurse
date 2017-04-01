@@ -1,10 +1,11 @@
 var Nurses = (function() {
 
+    var $mainContainer = $('#ns-container');
+
     var init = function() {
-        var $main = $('#main');
-        var json = {id : "id"};
-        
-        $main.append(Handlebars.partials['container'](json));
+
+        // Append the main container (#ns-container)
+        $('body').append(Handlebars.partials['container']());
     }
 
     return {

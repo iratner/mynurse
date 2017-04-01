@@ -1,9 +1,17 @@
 var Nurses = (function() {
 
-    console.log("hey there!");
+    var init = function() {
+        var $main = $('#main');
+        var json = {id : "id"};
+        
+        $main.append(Handlebars.partials['container'](json));
+    }
+
+    return {
+        init : init
+    }
 
 })(jQuery);
-
 
 // Handlebars examples
 

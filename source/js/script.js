@@ -1,18 +1,19 @@
-var Nurses = (function() {
+var Nurses = (function () {
 
-    var init = function() {
+    var init = function () {
 
         // Append the main container (#ns-container)
         $('body').append(Handlebars.partials['container']());
 
         var $container = $('#container');
-		$('#container').append(Handlebars.partials['header']());
+        $('#container').append(Handlebars.partials['header']());
         $container.append(Handlebars.partials['select-user-type']());
-        
+        $container.append(Handlebars.partials['nurse-signup'](nurseDropdowns));
+
     }
 
     return {
-        init : init
+        init: init
     }
 
 })(jQuery);

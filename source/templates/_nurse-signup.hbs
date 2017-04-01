@@ -1,3 +1,72 @@
 <div class="nurse-signup">
-    
+    <h1>Sign Up</h1>
+    <div class="signup-form">
+        <legend>First Name</legend>
+        <div>
+            <label>
+                <input type="text" name="firstname" id="firstname" >
+            </label>
+        </div>
+        <legend>Last Name</legend>
+        <div>
+            <label>
+                <input type="text" name="lastname" id="lastname" >
+            </label>
+        </div>
+        <legend>User Name</legend>
+        <div>
+            <label>
+                <input type="text" name="display_nm" id="display_nm" >
+            </label>
+        </div>
+        <legend>Email Address</legend>
+        <div>
+            <label>
+                <input type="email" name="email" id="email" >
+            </label>
+        </div>
+        <legend>Phone Number</legend>
+        <div>
+            <label>
+                <input type="tel" name="ph_num" id="ph_num" >
+            </label>
+        </div>
+        <legend>RN Certificate Number</legend>
+        <div>
+            <label>
+                <input type="text" name="rn_certnum" id="rn_certnum" >
+            </label>
+        </div>
+        <legend>Years of Experience</legend>
+        <div>
+            <select name="Experience" id="yrs_xp">
+                {{#each experience}}
+                <option value="{{yrs_xp_id}}">{{yrs_xp}}</option>
+                {{/each}}
+            </select>
+        </div>
+        {{!--generalist|psychiatric|home health|school|neurotrauma--}}
+        <legend>Specialty</legend>
+        <div>
+            <select name="specialty" id="specialty">
+                {{#each specialty}}
+                <option value="{{speciality_id}}">{{Name}}</option>
+                {{/each}}
+            </select>
+        </div>
+        <legend>Bio</legend>
+        <div>
+            <textarea rows="4" cols="50"></textarea>
+        </div>
+        <legend>Upload Resume</legend>
+        <div>
+            <input type="file" name="resume" id="resume">
+            <input type="submit" value="Upload Resume" name="submit">
+        </div>
+        <legend>Profile Picture</legend>
+        <div>
+            <input type="file" name="image" id="image">
+            <input type="submit" value="Upload Profile Picture" name="submit">
+        </div>
+    </div>
 </div>

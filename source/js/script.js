@@ -6,7 +6,9 @@ var Nurses = (function() {
         $('body').append(Handlebars.partials['container']());
 
         var $container = $('#container');
-        $container.append(Handlebars.partials['select-user-type']())
+		$('#container').append(Handlebars.partials['header']());
+        $container.append(Handlebars.partials['select-user-type']());
+        
     }
 
     return {

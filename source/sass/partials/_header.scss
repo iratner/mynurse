@@ -2,7 +2,7 @@
 
    //background-color: $guardian-color;
    color: white;
-   height: 70px;
+   height: 140px;
    width: 100%;
    position: absolute;
    top: 0;
@@ -14,10 +14,16 @@
       flex-direction: row;
       justify-content: space-between;
       padding: 15px 20px;
+      position: relative;
 
-      .title {
+      .logo {
          font-size: 1.5em;
          cursor: pointer;
+
+         > img {
+            width: 120px;
+         }
+
       }
 
       .navbar {
@@ -27,6 +33,7 @@
          display: flex;
          padding: 0;
          margin: 0;
+         height: 30px;
 
          > span {
             list-style: none;

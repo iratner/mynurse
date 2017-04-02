@@ -28,6 +28,7 @@
          }
 
          #learn-more-panel {
+            padding-top: 140px;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -42,7 +43,6 @@
                text-shadow: 1px 3px 7px rgba(1, 1, 1, 0.5);
                color: white;
                font-size: 1.8em;
-               margin-top: 100px;
             }
 
             #cta-learn-more {

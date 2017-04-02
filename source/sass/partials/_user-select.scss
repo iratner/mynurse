@@ -6,9 +6,11 @@
    
    #cta {
       display: inline-block;
-      height: 100px;
+      height: 40%;
+      width: 100%;
       background-color: $light-blue-accent;
       color: $guardian-color;
+      background: url(../img/nurses.jpg);
 
       h1 {
          font-weight: 100;

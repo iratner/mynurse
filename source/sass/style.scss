@@ -23,12 +23,13 @@ body {
       background-color: $main-background-color;
       height: 100%;
       width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: stretch;
+      //display: flex;
+      //flex-direction: column;
+      //align-items: stretch;
 
 
       @import "partials/header";
       @import "partials/user-select";
+      @import "partials/nurse-signup";
    }
 }

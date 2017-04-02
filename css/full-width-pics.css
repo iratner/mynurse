@@ -1,0 +1,65 @@
+/*
+ * Start Bootstrap - Full Width Pics (http://startbootstrap.com/)
+ * Copyright 2013-2016 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+ */
+body {
+  margin-top: 50px;
+  /* Required margin for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+}
+
+.image-bg-fluid-height,
+.image-bg-fixed-height {
+  text-align: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+.image-bg-fluid-height {
+  background: url("http://lorempixel.com/g/1920/500/") no-repeat center center scroll;
+  padding: 100px 0;
+}
+
+.image-bg-fixed-height {
+  background: url("http://lorempixel.com/g/1920/500/") no-repeat center center scroll;
+  height: 450px;
+}
+
+.img-center {
+  margin: 0 auto;
+}
+
+section {
+  padding: 75px 0;
+}
+
+.section-heading {
+  margin: 30px 0;
+  font-size: 4em;
+}
+
+.section-lead {
+  margin: 30px 0;
+}
+
+.section-paragraph {
+  margin: 30px 0;
+}
+
+footer {
+  margin: 50px 0;
+}
+
+@media (max-width: 768px) {
+  section {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+  .section-heading {
+    font-size: 2em;
+  }
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiIiwic291cmNlcyI6WyJmdWxsLXdpZHRoLXBpY3MuY3NzIl0sInNvdXJjZXNDb250ZW50IjpbIi8qXG4gKiBTdGFydCBCb290c3RyYXAgLSBGdWxsIFdpZHRoIFBpY3MgKGh0dHA6Ly9zdGFydGJvb3RzdHJhcC5jb20vKVxuICogQ29weXJpZ2h0IDIwMTMtMjAxNiBTdGFydCBCb290c3RyYXBcbiAqIExpY2Vuc2VkIHVuZGVyIE1JVCAoaHR0cHM6Ly9naXRodWIuY29tL0JsYWNrcm9ja0RpZ2l0YWwvc3RhcnRib290c3RyYXAvYmxvYi9naC1wYWdlcy9MSUNFTlNFKVxuICovXG5ib2R5IHtcbiAgbWFyZ2luLXRvcDogNTBweDtcbiAgLyogUmVxdWlyZWQgbWFyZ2luIGZvciAubmF2YmFyLWZpeGVkLXRvcC4gUmVtb3ZlIGlmIHVzaW5nIC5uYXZiYXItc3RhdGljLXRvcC4gQ2hhbmdlIGlmIGhlaWdodCBvZiBuYXZpZ2F0aW9uIGNoYW5nZXMuICovXG59XG5cbi5pbWFnZS1iZy1mbHVpZC1oZWlnaHQsXG4uaW1hZ2UtYmctZml4ZWQtaGVpZ2h0IHtcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xuICAtd2Via2l0LWJhY2tncm91bmQtc2l6ZTogY292ZXI7XG4gIC1tb3otYmFja2dyb3VuZC1zaXplOiBjb3ZlcjtcbiAgYmFja2dyb3VuZC1zaXplOiBjb3ZlcjtcbiAgLW8tYmFja2dyb3VuZC1zaXplOiBjb3Zlcjtcbn1cblxuLmltYWdlLWJnLWZsdWlkLWhlaWdodCB7XG4gIGJhY2tncm91bmQ6IHVybChcImh0dHA6Ly9sb3JlbXBpeGVsLmNvbS9nLzE5MjAvNTAwL1wiKSBuby1yZXBlYXQgY2VudGVyIGNlbnRlciBzY3JvbGw7XG4gIHBhZGRpbmc6IDEwMHB4IDA7XG59XG5cbi5pbWFnZS1iZy1maXhlZC1oZWlnaHQge1xuICBiYWNrZ3JvdW5kOiB1cmwoXCJodHRwOi8vbG9yZW1waXhlbC5jb20vZy8xOTIwLzUwMC9cIikgbm8tcmVwZWF0IGNlbnRlciBjZW50ZXIgc2Nyb2xsO1xuICBoZWlnaHQ6IDQ1MHB4O1xufVxuXG4uaW1nLWNlbnRlciB7XG4gIG1hcmdpbjogMCBhdXRvO1xufVxuXG5zZWN0aW9uIHtcbiAgcGFkZGluZzogNzVweCAwO1xufVxuXG4uc2VjdGlvbi1oZWFkaW5nIHtcbiAgbWFyZ2luOiAzMHB4IDA7XG4gIGZvbnQtc2l6ZTogNGVtO1xufVxuXG4uc2VjdGlvbi1sZWFkIHtcbiAgbWFyZ2luOiAzMHB4IDA7XG59XG5cbi5zZWN0aW9uLXBhcmFncmFwaCB7XG4gIG1hcmdpbjogMzBweCAwO1xufVxuXG5mb290ZXIge1xuICBtYXJnaW46IDUwcHggMDtcbn1cblxuQG1lZGlhIChtYXgtd2lkdGg6IDc2OHB4KSB7XG4gIHNlY3Rpb24ge1xuICAgIHBhZGRpbmctdG9wOiAyNXB4O1xuICAgIHBhZGRpbmctYm90dG9tOiAyNXB4O1xuICB9XG4gIC5zZWN0aW9uLWhlYWRpbmcge1xuICAgIGZvbnQtc2l6ZTogMmVtO1xuICB9XG59XG4iXSwiZmlsZSI6ImZ1bGwtd2lkdGgtcGljcy5jc3MifQ== */

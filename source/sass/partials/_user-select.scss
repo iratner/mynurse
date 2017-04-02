@@ -2,70 +2,190 @@
 
    display: flex;
    flex-direction: column;
-   height: 100%;
    
-   #cta {
-      display: inline-block;
-      height: 40%;
+   #landing-container {
+      height: 100%;
       width: 100%;
-      background-color: $light-blue-accent;
-      color: $guardian-color;
+      display: flex;
+      flex-direction: row;
       background: url(../img/nurses.jpg);
 
-      h1 {
-         font-weight: 100;
-         text-align: center;
+      .container-overlay {
+         background-position-y: -100px;
+         width: 100%;
+         height: 100%;
+         color: $guardian-color;
+         background-color: rgba(64,99,172, .7);
+
+         .slideable-panel {
+            position: absolute;
+            left: 100%;
+            @include transition(left .5s ease-in);
+
+            &.active {
+               left: 0;
+            }
+         }
+
+         #learn-more-panel {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+
+            .cta-text {
+               font-weight: 100;
+               font-family: 'Raleway', sans-serif;
+               width: 700px;
+               margin: 0 auto;
+               text-shadow: 1px 3px 7px rgba(1, 1, 1, 0.5);
+               color: white;
+               font-size: 1.8em;
+               margin-top: 100px;
+            }
+
+            #cta-learn-more {
+               text-align: center;
+               background-color: white;
+               font-size: 1.3em;
+               padding: 10px 0;
+               width: 150px;
+               margin: 50px auto 0;
+               display: block;
+               cursor: pointer;
+               border-radius: 3px;
+
+               &:hover {
+                  font-weight: bold;
+                  box-shadow: 1px 1px 5px 3px rgba(1, 1, 1, .25);
+               }
+            }
+         }
+
+         #login-panel {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+
+            .input-message {
+               width: 50%;
+               margin:0 auto;
+               display: flex;
+               flex-direction: row;
+               justify-content: flex-start;
+
+               div {
+                  font-size: 1.8em;
+                  color: white;
+                  font-weight: 100;
+                  font-family: 'Raleway', sans-serif;
+                  margin-bottom: 20px;
+               }
+            }
+
+            .input-fields {
+               width: 50%;
+               margin:0 auto;
+               display: flex;
+               flex-direction: row;
+               justify-content: flex-start;
+
+               input {
+                  width: 280px;
+                  height: 35px;
+                  font-size: 1.4em;
+                  padding: 0 10px;
+                  display: inline-block;
+                  margin-right: 15px;
+                  flex-grow: 2;
+               }
+
+               span {
+                  //width: 155px;
+                  height: 35px;
+                  display: inline-block;
+                  background-color: #2f347b;
+                  color: #c6d2e8;
+                  font-size: 1.4em;
+                  line-height: 1.4em;
+                  text-align: center;
+                  border-radius: 2px;
+                  cursor: pointer;
+                  padding: 0 10px;
+                  flex-grow: 1;
+
+                  &:hover {
+                     font-weight: bold;
+                     box-shadow: 1px 1px 5px 3px rgba(1, 1, 1, .15);
+                  }
+
+                  &:active {
+                     background-color: #2f349d;
+                  }
+               }
+            }
+         }
       }
    }
 
-   #user-types {
+   #bottom-section {
+      height: 100%;
       display: flex;
-      flex-direction: row;
-      width: 100%;
-      height:100%;
-      color: white;
-      //background-color: $light-blue-accent;
+      flex-direction: column;
 
-      section.user-type {
-         flex-grow: 1;
-         padding: 30px 0;
+      #user-types {
+         display: flex;
+         flex-direction: row;
+         width: 100%;
+         color: white;
+         flex-grow: 2;
 
-         .user-type-description {
-            color: #000;
-            width: 75%;
-            margin: 0 auto;
-         }
+         //background-color: $light-blue-accent;
 
-         .user-btn {
-            display: block;
-            width: 150px;
-            text-align: center;
-            margin: 20px auto;
-            line-height: 1.8em;
-            font-size: 1.3em;
-            border-radius: 3px;
-         }
+         section.user-type {
+            flex-grow: 1;
+            padding: 30px 0;
 
-
-         &[data-user-type="patient"] {
-            .user-btn {
-               background-color: $patient-color;
+            .user-type-description {
+               color: #000;
+               width: 60%;
+               margin: 0 auto;
             }
 
-         }
-
-         &[data-user-type="guardian"] {
             .user-btn {
-               background-color: $guardian-color;
+               display: block;
+               width: 150px;
+               text-align: center;
+               margin: 20px auto;
+               line-height: 1.8em;
+               font-size: 1.3em;
+               border-radius: 3px;
             }
 
-         }
+            &[data-user-type="patient"] {
+               .user-btn {
+                  background-color: $patient-color;
+               }
 
-         &[data-user-type="nurse"] {
-            .user-btn {
-               background-color: $nurse-color;
             }
 
+            &[data-user-type="guardian"] {
+               .user-btn {
+                  background-color: $guardian-color;
+               }
+
+            }
+
+            &[data-user-type="nurse"] {
+               .user-btn {
+                  background-color: $nurse-color;
+               }
+
+            }
          }
       }
    }

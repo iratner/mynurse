@@ -1,55 +1,79 @@
 .header {
 
-   background-color: $guardian-color;
+   //background-color: $guardian-color;
    color: white;
+   height: 70px;
+   width: 100%;
+   position: absolute;
+   top: 0;
+   z-index: 2;
+
 
    #brand {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      margin-bottom: 40px;
-      padding: 20px;
+      padding: 15px 20px;
 
       .title {
          font-size: 1.5em;
+         cursor: pointer;
       }
-   }
 
-   .navbar {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      background-color: white;
-
-
-
-      ul {
+      .navbar {
+         display: flex;
+         flex-direction: row;
+         justify-content: space-between;
          display: flex;
          padding: 0;
          margin: 0;
 
-         li {
+         > span {
             list-style: none;
             font-size: 1.2em;
-            padding: 3px 10px;
+            text-transform: lowercase;
+            line-height: 1.5em;
+            cursor: pointer;
+            margin-right: 20px;
+            position: relative;
+            padding-bottom: 3px;
 
-            padding: 5px 20px;
-            color: $guardian-color;
-         }
+            &:after {
+               content: '';
+               width: 100%;
+               border-bottom: 2px solid white;
+               position: absolute;
+               bottom: 0;
+               left: -100%;
+               opacity: 0;
+               @include transition(left .2s ease-in, opacity .2s ease-in);
+            }
 
-         &.navbar-right {
-            justify-content: flex-end;
+            &:hover {
+               font-weight: bold;
 
-            li {
-
+               &:after {
+                  opacity: 1;
+                  left: 0;
+               }
             }
          }
 
-         &.navbar-left {
-            justify-content: flex-start;
+         &[data-context="logged-in"] {
+            display: none;
+         }
+      }
+   }
 
-            li {
+   &.logged-in {
+      #brand {
+         .navbar {
+            &[data-context="logged-in"] {
+               display: flex;
+            }
 
+            &[data-context="logged-out"] {
+               display: none;
             }
          }
       }

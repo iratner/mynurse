@@ -43,6 +43,12 @@ gulp.task('html', function() {
         .pipe(browserSync.stream());
 });
 
+gulp.task('other-files', function() {
+    gulp.src(['source/fonts/**/*.*', 'source/img/**/*.*'])
+        .pipe(gulp.dest('build/'))
+        .pipe(browserSync.stream());
+});
+
 gulp.task('partials', function() {
     // Assume all partials start with an underscore
     // You could also put them in a folder such as source/templates/partials/*.hbs
@@ -72,6 +78,7 @@ gulp.task('serve', tasks, function() {
     gulp.watch('source/**/*.html', ['html']);
     gulp.watch('source/**/*.hbs', ['partials']);
     gulp.watch('source/sass/**/*.scss', ['sass']);
+    gulp.watch(['source/fonts/**/*.*', 'source/img/**/*.*'], ['other-files']);
 
 });
 

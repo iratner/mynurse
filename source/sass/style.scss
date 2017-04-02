@@ -1,7 +1,12 @@
+
+@import "mixins/animation_mixins";
+@import "partials/fonts";
+
 $main-background-color: white;
-$guardian-color: #4063ac;
-$patient-color: #5c8df7;
-$nurse-color: #8490ab;
+$guardian-color: #4292c6;
+$patient-color: #2171b5;
+$nurse-color: #08519c;
+$sage-color: #9fc5a1;
 
 $light-blue-accent: #bed0f7;
 $dark-blue-accent: #545454;
@@ -13,7 +18,9 @@ body {
    align-items: stretch;
    margin: 0;
    padding: 0;
-   font-family: 'Helvetica', 'Arial', sans-serif;
+   font-family: 'Gudea', sans-serif;
+   overflow-x: hidden;
+   overflow-y: scroll;
 
    * {
       box-sizing: border-box;
@@ -30,6 +37,14 @@ body {
 
       @import "partials/header";
       @import "partials/user-select";
+      @import "partials/account-landing";
       @import "partials/nurse-signup";
+      @import "partials/footer";
    }
+
+   @import "partials/views";
+}
+
+.display-none {
+   display: none !important;
 }

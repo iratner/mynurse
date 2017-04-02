@@ -1,17 +1,15 @@
 <div class="header">
     <div id="brand">
-        <div class="title">My Family Nurse (replace with logo)</div>
-    </div>
-
-    <div class="navbar">
-        <ul class="navbar-right">
-            <li>Login</li>
-            <li>Sign Up</li>
-        </ul>
-        <ul class="navbar-left">
-            <li>Map</li>
-            <li>FAQ</li>
-            <li>Contact</li>
-        </ul>
+        <div class="title panel-selector" data-panel-id="learn-more-panel">My Family Nurse (replace with logo)</div>
+        <div class="navbar" data-context="logged-out">
+            <span class="panel-selector" data-panel-id="login-panel">Login</span>
+            <span class="panel-selector" data-panel-id="signup-panel">Sign Up</span>
+            <span class="panel-selector" data-panel-id="map-panel">Map</span>
+            <span class="panel-selector" data-panel-id="faq-panel">FAQ</span>
+            <span class="panel-selector" data-panel-id="contact-panel">Contact</span>
+        </div>
+        <div class="navbar" data-context="logged-in">
+            <span class="account-nav" data-panel-id="">account</span>
+        </div>
     </div>
 </div>

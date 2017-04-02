@@ -13,7 +13,7 @@ var gulp = require('gulp'),
 
 
 var tasks = ['js', 'sass', 'html', 'partials'];
-
+var ghPages = require('gulp-gh-pages');
 
 /**********************************************************************
  *                      Gulp Tasks
@@ -80,6 +80,12 @@ gulp.task('serve', tasks, function() {
     gulp.watch('source/sass/**/*.scss', ['sass']);
     gulp.watch(['source/fonts/**/*.*', 'source/img/**/*.*'], ['other-files']);
 
+});
+
+/* GitHub Pages plugin */
+gulp.task('deploy', function() {
+  return gulp.src('./build/**/*')
+    .pipe(ghPages());
 });
 
 /**********************************************************************

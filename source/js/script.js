@@ -1,5 +1,23 @@
 var Nurses = (function () {
 
+    var dataConstants = Object.freeze({
+        USER_ID : 0,
+        DISPLAY_NAME : 1,
+        LOCATION : 2,
+        CERTIFICATION_NUMBER : 3,
+        YEARS_EXP : 4,
+        SPECIALTY : 5,
+        BIO : 6,
+        RESUME : 7,
+        IMAGE : 8,
+        PHONE_NUM : 9,
+        EMAIL : 10,
+        RATING : 11,
+        RATE : 12,
+        AVAILABILITY : 13,
+        TAGLINE : 14
+    });
+
     var init = function () {
 
         // Append the main container (#ns-container)
@@ -75,7 +93,8 @@ var Nurses = (function () {
 
     return {
         init: init,
-        initMap : initMap
+        initMap : initMap,
+        dataConstants : dataConstants
     }
 
 })();

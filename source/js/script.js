@@ -28,16 +28,12 @@ var Nurses = (function () {
 		$container.append(Handlebars.partials['header']());
         $container.append(Handlebars.partials['user-select-landing']());
         $container.append(Handlebars.partials['account-landing']());
-        $container.append(Handlebars.partials['nurse-signup'](nurseDropdowns));
+        $container.find('#landing-container .container-overlay').append(Handlebars.partials['nurse-signup'](nurseDropdowns));
 
     }
 
     var initMap = function() {
         var marker1 = {lat: 39.965514, lng: -82.989893};
-        //var marker2 = {lat: 39.967, lng: -82.99};
-        //var marker3 = {lat: 39.977, lng: -82.80};
-        //var marker4 = {lat: 40.965514, lng: -83.989893};
-        //var marker5 = {lat: 38.965514, lng: -81.989893};
 
         var map = new google.maps.Map(document.getElementById('map'), {
             zoom: 15,
@@ -127,9 +123,9 @@ var Nurses = (function () {
         var locations = [
             ['test', 39.965514, -82.989893, 4],
             ['test 2', 39.967, -82.99, 5],
-            ['test 3', 39.977, -82.80, 3],
-            ['test 4', 40.965514, -83.989893, 2],
-            ['test 5', 38.965514, -81.989893, 1]
+            ['test 3', 39.964, -82.992, 3],
+            ['test 4', 39.969, -82.988893, 2],
+            ['test 5', 39.966514, -82.9897793, 1]
         ];
 
         var marker, i;

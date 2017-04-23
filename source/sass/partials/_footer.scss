@@ -1,5 +1,14 @@
 #footer {
    height: 300px;
    background-color: $sage-color;
+   position: relative;
+
+   img {
+      width: 130px;
+      position: absolute;
+      top: 70px;
+      right: 120px;
+      opacity: .4;
+   }
 
 }
